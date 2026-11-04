@@ -120,7 +120,22 @@ export const technicalSkills = {
   ],
 };
 
-export const leadershipList = [];
+export const leadershipList = [
+  {
+    title: "Technical Symposium & Coding Challenges",
+    role: "Lead Student Coordinator",
+    badge: "Leadership",
+    description:
+      "Organized departmental hackathons, coding contests, and peer workshops for CSE students, promoting collaborative problem solving and clean coding standards.",
+  },
+  {
+    title: "Developer Community & Peer Mentoring",
+    role: "Technical Mentor",
+    badge: "Mentorship",
+    description:
+      "Guided junior students through Python fundamentals, Git version control workflows, and REST API integration for real-world academic projects.",
+  },
+];
 
 export const internshipsList = [
   {
