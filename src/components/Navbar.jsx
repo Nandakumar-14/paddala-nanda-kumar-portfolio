@@ -20,13 +20,12 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
-        isOpen
+      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isOpen
           ? 'bg-[#ff2a2a] py-4'
           : isScrolled
             ? 'bg-transparent py-4'
             : 'bg-transparent py-6'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Left: Logo */}
@@ -92,9 +91,8 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Panel */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full overflow-hidden transition-all duration-300 bg-[#ff2a2a] shadow-2xl ${
-          isOpen ? 'max-h-96 opacity-100 px-6 py-6' : 'max-h-0 opacity-0 px-6 py-0'
-        }`}
+        className={`md:hidden absolute top-full left-0 w-full overflow-hidden transition-all duration-300 bg-[#ff2a2a] shadow-2xl ${isOpen ? 'max-h-96 opacity-100 px-6 py-6' : 'max-h-0 opacity-0 px-6 py-0'
+          }`}
       >
         <div className="flex flex-col">
           {navLinks.map((link) => (
@@ -119,3 +117,4 @@ export default function Navbar() {
     </nav>
   )
 }
+
