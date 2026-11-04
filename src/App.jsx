@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import About from './components/About'
 import Footer from './components/Footer'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <main className="flex-grow">
         <Hero />
+        <About />
       </main>
       <Footer />
     </div>
