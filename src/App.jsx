@@ -1,3 +1,4 @@
+import { internshipsList, leadershipList } from './data/portfolioData'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -9,20 +10,21 @@ import SoftSkills from './components/SoftSkills'
 import Footer from './components/Footer'
 
 function App() {
+  const hasInternships = internshipsList && internshipsList.length > 0
+  const hasLeadership = leadershipList && leadershipList.length > 0
+
   return (
-    <div className="bg-[#000] text-white min-h-screen flex flex-col justify-between selection:bg-[#ff2a2a] selection:text-white">
+    <>
       <Navbar />
-      <main className="flex-grow">
-        <Hero />
-        <About />
-        <TechnicalSkills />
-        <Projects />
-        <Internships />
-        <Leadership />
-        <SoftSkills />
-      </main>
+      <Hero />
+      <About />
+      <TechnicalSkills />
+      <Projects />
+      {hasInternships && <Internships />}
+      {hasLeadership && <Leadership />}
+      <SoftSkills />
       <Footer />
-    </div>
+    </>
   )
 }
 
