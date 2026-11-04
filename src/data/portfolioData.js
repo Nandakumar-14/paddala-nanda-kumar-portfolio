@@ -122,7 +122,19 @@ export const technicalSkills = {
 
 export const leadershipList = [];
 
-export const internshipsList = [];
+export const internshipsList = [
+  {
+    organization: "TAP Academy",
+    role: "Full Stack Developer Trainee",
+    duration: "2024 - Present",
+    skills: [
+      "Full-stack development using Python, JavaScript, and modern frameworks",
+      "Building automated n8n workflows and RESTful API integrations",
+      "Designing relational database schemas and optimizing SQL queries",
+    ],
+    tech: ["Python", "JavaScript", "React.js", "SQL", "Google Gemini AI", "n8n"],
+  },
+];
 
 export const softSkillsList = [
   {
