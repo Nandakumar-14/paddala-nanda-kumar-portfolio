@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import TechnicalSkills from './components/TechnicalSkills'
 import Footer from './components/Footer'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <main className="flex-grow">
         <Hero />
         <About />
+        <TechnicalSkills />
       </main>
       <Footer />
     </div>
