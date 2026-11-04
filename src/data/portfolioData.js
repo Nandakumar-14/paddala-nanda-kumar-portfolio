@@ -156,7 +156,10 @@ export const projects = [
     description:
       "Built an automated n8n pipeline that pulls AI and Tech news from two RSS feeds and merges them on a schedule. Used Gemini to turn raw articles into short, readable summaries and automated daily digest emails via the Gmail API.",
     techTags: ["n8n", "Google Gemini API", "Gmail API", "RSS"],
-    links: { github: "https://github.com/Nandakumar-14", demo: "" },
+    links: {
+      github: "https://github.com/Nandakumar-14",
+      demo: "https://drive.google.com/file/d/1faEEwHJr46p1c28xkEo4GaAtqjHo1SVh/view?usp=drive_link",
+    },
     isFlagship: true,
   },
   {
