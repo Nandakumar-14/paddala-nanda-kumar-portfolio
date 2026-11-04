@@ -39,12 +39,12 @@ export default function About() {
           <motion.div
             initial={{ y: -300, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{ type: 'spring', stiffness: 110, damping: 9, mass: 1.1 }}
-            className="relative flex flex-col items-center pt-8"
+            className="relative flex flex-col items-center pt-8 w-[280px]"
           >
             {/* Lanyard String */}
-            <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-3 h-40 bg-black pointer-events-none" />
+            <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-3 h-40 bg-black pointer-events-none z-0" />
 
             {/* Grey Clip */}
             <div className="relative z-10 w-8 h-4 bg-gray-400 rounded-sm mb-1 shadow-sm flex items-center justify-center">
@@ -55,31 +55,53 @@ export default function About() {
             <button
               type="button"
               aria-label="Flip ID card"
-              onClick={() => setFlipped(!flipped)}
-              className="relative w-full max-w-[280px] -rotate-3 hover:rotate-0 transition-transform duration-500 [perspective:1200px] focus:outline-none cursor-pointer"
+              onClick={() => setFlipped((prev) => !prev)}
+              className="relative block w-[280px] h-[373px] max-w-[280px] -rotate-3 hover:rotate-0 transition-transform duration-500 focus:outline-none cursor-pointer select-none"
+              style={{
+                perspective: '1200px',
+                WebkitPerspective: '1200px',
+              }}
             >
               {/* 3D Rotating Inner Card */}
               <div
-                className="relative w-full aspect-[3/4] transition-transform duration-700 [transform-style:preserve-3d]"
+                className="relative w-full h-full duration-700"
                 style={{
                   transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+                  transformStyle: 'preserve-3d',
+                  WebkitTransformStyle: 'preserve-3d',
+                  transition: 'transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
                 }}
               >
                 {/* FRONT face: Existing Dark ID Badge */}
-                <div className="absolute inset-0 [backface-visibility:hidden] bg-gray-900 rounded-2xl p-3 shadow-2xl flex flex-col">
+                <div
+                  className="absolute inset-0 bg-gray-900 rounded-2xl p-3 shadow-2xl flex flex-col justify-between"
+                  style={{
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                  }}
+                >
                   {/* Cutout Slot */}
-                  <div className="mx-auto w-10 h-1.5 bg-black/60 rounded-full mb-3 shrink-0" />
+                  <div className="mx-auto w-10 h-1.5 bg-black/60 rounded-full mb-2 shrink-0" />
 
                   {/* Portrait Photo */}
-                  <img
-                    src={stackImage}
-                    alt={personalInfo?.name || 'Paddala Nandakumar'}
-                    className="aspect-[3/4] w-full h-full rounded-xl object-cover object-top shadow-inner"
-                  />
+                  <div className="w-full flex-1 overflow-hidden rounded-xl bg-black/40">
+                    <img
+                      src={stackImage}
+                      alt={personalInfo?.name || 'Paddala Nandakumar'}
+                      className="w-full h-full object-cover object-top shadow-inner block"
+                    />
+                  </div>
                 </div>
 
                 {/* BACK face: Visiting Card */}
-                <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-2xl bg-gradient-to-br from-[#141414] to-[#1f1f1f] shadow-2xl overflow-hidden flex flex-col justify-between text-left p-5 border border-white/10">
+                <div
+                  className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#141414] to-[#1f1f1f] shadow-2xl overflow-hidden flex flex-col justify-between text-left p-5 border border-white/10"
+                  style={{
+                    transform: 'rotateY(180deg)',
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden',
+                  }}
+                >
                   {/* Top Red Bar */}
                   <div className="absolute top-0 left-0 right-0 h-[6px] bg-[#ff2a2a]" />
 
@@ -102,6 +124,7 @@ export default function About() {
                         <a
                           href={`mailto:${personalInfo.emails.primary}`}
                           onClick={(e) => e.stopPropagation()}
+                          onPointerDown={(e) => e.stopPropagation()}
                           className="flex items-center gap-2 text-xs text-white/85 hover:text-white transition-colors truncate"
                         >
                           <svg
@@ -127,6 +150,7 @@ export default function About() {
                         <a
                           href={`tel:${personalInfo.phone}`}
                           onClick={(e) => e.stopPropagation()}
+                          onPointerDown={(e) => e.stopPropagation()}
                           className="flex items-center gap-2 text-xs text-white/85 hover:text-white transition-colors"
                         >
                           <svg
@@ -179,6 +203,7 @@ export default function About() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
+                            onPointerDown={(e) => e.stopPropagation()}
                             className="flex items-center gap-1.5 text-xs text-white/85 hover:text-white transition-colors"
                           >
                             <svg
@@ -197,6 +222,7 @@ export default function About() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={(e) => e.stopPropagation()}
+                            onPointerDown={(e) => e.stopPropagation()}
                             className="flex items-center gap-1.5 text-xs text-white/85 hover:text-white transition-colors"
                           >
                             <svg
