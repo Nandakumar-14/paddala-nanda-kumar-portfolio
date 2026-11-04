@@ -45,7 +45,7 @@ export const heroContent = {
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Paddala Nandakumar</span>, a Computer Science graduate based in India, sharpening my skills through the placement training program at TAP Academy. I’m passionate about Software Development, Python and Artificial Intelligence. I’m driven by curiosity about emerging technologies and a passion for building innovative software solutions while continuously expanding my knowledge and creating meaningful impact through technology.`,
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Paddala Nandakumar</span>, a Computer Science graduate based in India. I’m passionate about Software Development, Python and Artificial Intelligence. I’m driven by curiosity about emerging technologies and a passion for building innovative software solutions while continuously expanding my knowledge and creating meaningful impact through technology.`,
   techStack: ["Python", "JavaScript", "React", "SQL", "Google Gemini AI", "n8n"],
 };
 
