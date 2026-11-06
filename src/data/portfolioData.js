@@ -38,7 +38,7 @@ export const heroContent = {
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
-    href: "mailto:paddalanandakumar@gmail.com?subject=Hiring Inquiry – Portfolio&body=Hello Paddala Nanda Kumar,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ABest Regards,",
+    href: "mailto:paddalanandakumar@gmail.com",
   },
   ctaResume: { text: "Download Resume", href: "/resume.pdf" },
 };

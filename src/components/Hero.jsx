@@ -212,7 +212,9 @@ export default function Hero() {
             {heroContent.ctaResume && heroContent.ctaResume.href && (
               <a
                 href={heroContent.ctaResume.href}
-                download
+                download="Paddala_Nandakumar_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-3 rounded-full bg-transparent border border-white/50 text-white font-semibold hover:border-white transition-colors duration-200 flex items-center gap-2"
               >
                 <svg
