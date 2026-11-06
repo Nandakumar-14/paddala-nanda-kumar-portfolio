@@ -201,15 +201,14 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className={`px-8 py-4 rounded-full border-2 font-bold transition-all duration-300 flex items-center justify-center gap-2 select-none shrink-0 ${
-                    status === 'sending'
+                  className={`px-8 py-4 rounded-full border-2 font-bold transition-all duration-300 flex items-center justify-center gap-2 select-none shrink-0 ${status === 'sending'
                       ? 'bg-black/30 border-white/30 text-white/60 cursor-not-allowed'
                       : status === 'success'
                         ? 'bg-emerald-600 border-emerald-400 text-white shadow-[0_0_20px_rgba(16,185,129,0.5)]'
                         : status === 'error'
                           ? 'bg-red-950 border-red-500 text-white shadow-[0_0_20px_rgba(239,68,68,0.5)]'
                           : 'border-white text-white group hover:bg-white hover:text-[#ff2a2a] cursor-pointer shadow-lg'
-                  }`}
+                    }`}
                 >
                   {status === 'sending' && (
                     <>
@@ -264,3 +263,4 @@ export default function Contact() {
     </section>
   )
 }
+

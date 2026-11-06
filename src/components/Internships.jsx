@@ -77,7 +77,7 @@ export default function Internships() {
   }
 
   return (
-    <section className="bg-[#ff2a2a] pt-24 pb-32 px-6 md:px-12 relative overflow-hidden text-white">
+    <section id="experience" className="bg-[#ff2a2a] pt-24 pb-32 px-6 md:px-12 relative overflow-hidden text-white">
       {/* Top Edge: Torn-paper SVG Divider flowing from previous dark section to red */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-10 pointer-events-none rotate-180 -translate-y-[1px]">
         <svg
@@ -124,3 +124,4 @@ export default function Internships() {
     </section>
   )
 }
+

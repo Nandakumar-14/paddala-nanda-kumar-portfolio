@@ -14,7 +14,13 @@ export default function Hero() {
 
     const handleLoad = () => AOS.refresh()
     window.addEventListener('load', handleLoad)
-    return () => window.removeEventListener('load', handleLoad)
+    const refreshTimer = setTimeout(() => {
+      AOS.refresh()
+    }, 2500)
+    return () => {
+      window.removeEventListener('load', handleLoad)
+      clearTimeout(refreshTimer)
+    }
   }, [])
 
   const toggleVideo = (e) => {
@@ -51,7 +57,7 @@ export default function Hero() {
       </video>
 
       {/* Readability Overlay */}
-      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-black/45 via-black/10 to-transparent" />
+      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-black/60 via-black/15 to-transparent md:bg-gradient-to-r md:from-black/45 md:via-black/10 md:to-transparent" />
 
       {/* Left Floating Social Bar (Desktop) */}
       <aside

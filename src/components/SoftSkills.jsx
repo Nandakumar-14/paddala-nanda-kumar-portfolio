@@ -31,7 +31,7 @@ export default function SoftSkills() {
   }
 
   return (
-    <section className="bg-white bg-[linear-gradient(to_right,#80808006_1px,transparent_1px),linear-gradient(to_bottom,#80808006_1px,transparent_1px)] bg-[size:60px_60px] pt-24 pb-32 px-6 md:px-12 relative overflow-hidden text-gray-900">
+    <section id="soft-skills" className="bg-white bg-[linear-gradient(to_right,#80808006_1px,transparent_1px),linear-gradient(to_bottom,#80808006_1px,transparent_1px)] bg-[size:60px_60px] pt-24 pb-32 px-6 md:px-12 relative overflow-hidden text-gray-900">
       {/* Torn-paper divider at the top flowing from dark section into white */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-10 pointer-events-none rotate-180 -translate-y-[1px]">
         <svg
@@ -71,3 +71,4 @@ export default function SoftSkills() {
     </section>
   )
 }
+

@@ -87,7 +87,7 @@ export default function About() {
                   <div className="w-full flex-1 overflow-hidden rounded-xl bg-black/40">
                     <img
                       src={stackImage}
-                      alt={personalInfo?.name || 'Paddala Nandakumar'}
+                      alt={`Portrait of ${personalInfo?.name || 'Paddala Nanda Kumar'} - Python Full Stack Developer`}
                       className="w-full h-full object-cover object-top shadow-inner block"
                     />
                   </div>
