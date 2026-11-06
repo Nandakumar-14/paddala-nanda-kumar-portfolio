@@ -2,7 +2,7 @@
 
 Personal developer portfolio showcasing full-stack applications, automated data pipelines, and intelligent software solutions.
 
-**Live site:** https://YOUR-SITE-URL/
+**Live site:** https://paddala-nanda-kumar-portfolio.vercel.app/
 
 ---
 
