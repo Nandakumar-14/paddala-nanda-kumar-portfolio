@@ -1,16 +1,54 @@
-# React + Vite
+# Paddala Nanda Kumar — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal developer portfolio showcasing full-stack applications, automated data pipelines, and intelligent software solutions.
 
-Currently, two official plugins are available:
+**Live site:** https://YOUR-SITE-URL/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** — Component-driven frontend architecture
+- **Vite** — High-performance frontend build tooling
+- **Tailwind CSS 4** — Modern utility-first styling system
+- **Framer Motion** — Dynamic gestures, springs, and scroll-linked animations
+- **AOS (Animate On Scroll)** — Scroll-triggered element reveals
+- **EmailJS** — Client-side contact form delivery to inbox
+- **WebGL** — Interactive fluid splash cursor simulation
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Run Locally
+
+Clone the repository and install the dependencies:
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+---
+
+## Environment Variables
+
+To enable the direct contact form via EmailJS, create a `.env.local` file in the root directory with your EmailJS credentials:
+
+```env
+VITE_EMAILJS_SERVICE_ID=
+VITE_EMAILJS_TEMPLATE_ID=
+VITE_EMAILJS_PUBLIC_KEY=
+```
+
+If not provided, the form automatically falls back to standard client mailto links.
+
+---
+
+## Training & Credits
+
+Built during the placement training program at [TAP Academy](https://thetapacademy.com/) (full-stack development, AI and augmented reality training).
