@@ -50,7 +50,7 @@ export default function Footer() {
         <div className="flex flex-col space-y-2">
           <a
             href="#contact"
-            className="underline hover:text-white transition-colors uppercase font-semibold block"
+            className="text-white underline hover:text-[#ff2a2a] transition-colors uppercase font-semibold block"
           >
             Contact
           </a>
@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="flex flex-col items-start md:items-center space-y-4">
           <a
             href={`mailto:${personalInfo.emails.primary}`}
-            className="underline hover:text-white transition-colors font-medium"
+            className="text-white underline hover:text-[#ff2a2a] transition-colors font-medium"
           >
             {personalInfo.emails.primary}
           </a>
