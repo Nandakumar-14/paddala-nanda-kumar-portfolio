@@ -683,19 +683,29 @@ function SplashCursor({
       displayMaterial.setKeywords(displayKeywords);
     }
 
-    updateKeywords();
-    initFramebuffers();
+    try {
+      updateKeywords();
+      initFramebuffers();
+    } catch (err) {
+      console.warn('Framebuffer initialization failed:', err);
+      return;
+    }
     let lastUpdateTime = Date.now();
     let colorUpdateTimer = 0.0;
 
     function updateFrame() {
       if (!isActive) return;
-      const dt = calcDeltaTime();
-      if (resizeCanvas()) initFramebuffers();
-      updateColors(dt);
-      applyInputs();
-      step(dt);
-      render(null);
+      try {
+        const dt = calcDeltaTime();
+        if (resizeCanvas()) initFramebuffers();
+        updateColors(dt);
+        applyInputs();
+        step(dt);
+        render(null);
+      } catch (err) {
+        console.warn('Fluid simulation frame error:', err);
+        return;
+      }
       animationFrameId.current = requestAnimationFrame(updateFrame);
     }
 
